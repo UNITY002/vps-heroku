@@ -48,11 +48,10 @@ RUN apt-get -qqy update \
     && apt install -qqy --no-install-recommends obs-studio \
     && apt install unzip \
     && apt-get autoclean \
-    && apt-get install android-tools-adb \
+    && apt-get install -y android-tools-adb \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
-   CMD ["y"]
 
 # COPY conf.d/* /etc/supervisor/conf.d/
 
