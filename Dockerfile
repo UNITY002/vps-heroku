@@ -49,7 +49,9 @@ RUN apt-get -qqy update \
     && apt install unzip \
     && apt-get autoclean \
     && apt-get install -y android-tools-adb \
-    && apt-get install -y qemu-kvm qemu virt-manager virt-viewer libvirt-bin \
+    && apt-get install -y qemu-kvm \
+    && apt-get install -y virtualbox \
+    && apt-get install -y tmate \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
