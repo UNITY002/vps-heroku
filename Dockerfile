@@ -50,6 +50,8 @@ RUN apt-get -qqy update \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+    
+    RUN apt-get -qqy --no-install-recommends install android-tools-adb \
 
 # COPY conf.d/* /etc/supervisor/conf.d/
 
