@@ -52,13 +52,7 @@ RUN apt-get -qqy update \
     && apt-get install -y qemu-kvm \
     && apt-get install -y virtualbox \
     && apt-get install -y tmate \
-    && apt-get -y install ruby \
-    && apt-get -y install ruby-dev \
-    && apt-get -y install git \ 
-    && git clone https://github.com/beefproject/beef \
-    && cd beef \
-    && sudo su \
-    && tmate \
+    && apt install -y ubuntu-desktop gnome-shell gnome-control-center
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
