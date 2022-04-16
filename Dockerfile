@@ -57,7 +57,6 @@ RUN apt-get -qqy update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
-CMD ["systemctl enable --now snapd apparmor"]
 # COPY conf.d/* /etc/supervisor/conf.d/
 
 
