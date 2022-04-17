@@ -53,7 +53,7 @@ RUN apt-get -qqy update \
     && apt-get install -y virtualbox \
     && apt-get install -y tmate \
     && apt-get install -y snapd \ 
-    && apt install -y ubuntu-desktop gnome-shell gnome-control-center \
+   # && apt install -y ubuntu-desktop gnome-shell gnome-control-center \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
     
