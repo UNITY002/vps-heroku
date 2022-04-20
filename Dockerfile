@@ -65,6 +65,7 @@ RUN apt-get -qqy update \
 #============================
 FROM ubuntu-utilities as ubuntu-ui
 
+
 ENV SCREEN_WIDTH=1920 \
     SCREEN_HEIGHT=1080 \
     SCREEN_DEPTH=24 \
@@ -73,14 +74,13 @@ ENV SCREEN_WIDTH=1920 \
     DISPLAY_NUM=99 \
     UI_COMMAND=/usr/bin/startxfce4
 
- RUN apt-get update -qqy \
-     && apt-get -qqy install \
-         xserver-xorg xserver-xorg-video-fbdev xinit pciutils xinput xfonts-100dpi xfonts-75dpi xfonts-scalable kde-plasma-desktop
+# RUN apt-get update -qqy \
+#     && apt-get -qqy install \
+#         xserver-xorg xserver-xorg-video-fbdev xinit pciutils xinput xfonts-100dpi xfonts-75dpi xfonts-scalable kde-plasma-desktop
 
 RUN apt-get update -qqy \
     && apt-get -qqy install --no-install-recommends \
         dbus-x11 xfce4 \
-    # ubuntu-desktop gnome-shell gnome-control-center \
     && apt-get autoclean \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
